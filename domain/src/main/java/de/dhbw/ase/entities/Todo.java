@@ -13,16 +13,17 @@ public final class Todo {
     private Status status;
     private EndDatum enddate;
     private UUID personID;
-    private Ort place;
+    private Place place;
 
 
     public Todo(){
 
     }
 
-    public Todo(String title, EndDatum enddate){
+    public Todo(String title,String description, EndDatum enddate){
         this.uuid = UUID.randomUUID();
         this.title= title;
+        this.description = description;
         this.enddate = enddate;
         if(enddate.endDatum().isBefore(LocalDate.now())){
             this.status = Status.OPEN;
@@ -50,8 +51,8 @@ public final class Todo {
 
     public void setPersonID(UUID personID){this.personID = personID;}
 
-    public Ort getPlace(){return place;}
+    public Place getPlace(){return place;}
 
-    public void setPlace(Ort place){this.place = place;}
+    public void setPlace(Place place){this.place = place;}
 
 }
