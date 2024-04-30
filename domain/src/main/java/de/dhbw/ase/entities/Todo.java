@@ -1,6 +1,6 @@
 package de.dhbw.ase.entities;
 
-import de.dhbw.ase.values.EndDatum;
+import de.dhbw.ase.values.EndDate;
 import de.dhbw.ase.values.Status;
 
 import java.time.LocalDate;
@@ -11,7 +11,7 @@ public final class Todo {
     private String title;
     private String description;
     private Status status;
-    private EndDatum enddate;
+    private EndDate enddate;
     private UUID personID;
     private Place place;
 
@@ -20,7 +20,7 @@ public final class Todo {
 
     }
 
-    public Todo(String title,String description, EndDatum enddate){
+    public Todo(String title,String description, EndDate enddate){
         this.uuid = UUID.randomUUID();
         this.title= title;
         this.description = description;
@@ -43,9 +43,9 @@ public final class Todo {
 
     public void setDescription(String description){this.description = description;}
 
-    public EndDatum getEnddate(){return enddate;}
+    public EndDate getEnddate(){return enddate;}
 
-    public void setEnddate(EndDatum enddate){this.enddate = enddate;}
+    public void setEnddate(EndDate enddate){this.enddate = enddate;}
 
     public UUID getPersonID(){return personID;}
 

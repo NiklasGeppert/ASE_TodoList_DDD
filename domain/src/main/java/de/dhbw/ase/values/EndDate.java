@@ -3,5 +3,5 @@ package de.dhbw.ase.values;
 import java.time.LocalDate;
 
 
-public record EndDatum(LocalDate endDatum) {
+public record EndDate(LocalDate endDatum) {
 }
