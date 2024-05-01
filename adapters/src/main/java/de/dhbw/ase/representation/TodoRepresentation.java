@@ -3,9 +3,11 @@ package de.dhbw.ase.representation;
 import de.dhbw.ase.entities.Place;
 import de.dhbw.ase.values.EndDate;
 import de.dhbw.ase.values.Status;
+import lombok.Builder;
 
 import java.util.UUID;
 
+@Builder
 public class TodoRepresentation {
     private UUID id;
     private String title;

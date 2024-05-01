@@ -3,10 +3,11 @@ package de.dhbw.ase.representation;
 import de.dhbw.ase.values.EMail;
 import de.dhbw.ase.values.Gender;
 import de.dhbw.ase.values.PersonName;
+import lombok.Builder;
 
 import java.util.UUID;
 
-
+@Builder
 public class PersonRepresentation {
 
     private UUID id;

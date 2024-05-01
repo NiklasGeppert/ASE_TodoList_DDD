@@ -10,7 +10,6 @@ public class Person {
     private UUID id;
     private PersonName name;
     private EMail email;
-
     private Gender gender;
 
     public Person(UUID id, PersonName name, EMail email, Gender gender) {

@@ -55,4 +55,7 @@ public final class Todo {
 
     public void setPlace(Place place){this.place = place;}
 
+    public Status getStatus() {return status;}
+
+    public void setStatus(Status status) {this.status = status;}
 }

@@ -2,10 +2,12 @@ package de.dhbw.ase.representation;
 
 import de.dhbw.ase.entities.Todo;
 import de.dhbw.ase.values.ListStatus;
+import lombok.Builder;
 
 import java.util.List;
 import java.util.UUID;
 
+@Builder
 public class TodoListRepresentation {
     private UUID personID;
     private List<Todo> todoList;
