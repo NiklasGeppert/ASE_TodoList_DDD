@@ -19,7 +19,7 @@ public class PersonMapper {
         return PersonRepresentation.builder()
                 .id(person.getId())
                 .name(person.getName())
-                .eMail(person.geteMail())
+                .getemail(person.geteMail())
                 .gender(person.getGender())
                 .build();
     }

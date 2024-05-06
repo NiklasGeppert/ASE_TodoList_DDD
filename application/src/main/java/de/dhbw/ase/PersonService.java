@@ -28,7 +28,7 @@ public class PersonService {
     public PersonRepresentation createPerson(PersonRepresentation personRepresentation) {
         Person person = new Person(personRepresentation.getId(),
                 personRepresentation.getName(),
-                personRepresentation.geteMail(),
+                personRepresentation.getemail(),
                 personRepresentation.getGender()
         );
 
@@ -47,7 +47,7 @@ public class PersonService {
     public PersonRepresentation updatePerson(UUID id, PersonRepresentation personRepresentation) {
         Person person = getPerson(id);
         person.setName(personRepresentation.getName());
-        person.setEmail(personRepresentation.geteMail());
+        person.setEmail(personRepresentation.getemail());
         person.setGender(personRepresentation.getGender());
 
         return personMapper.toPersonRepresentation(personRepository.save(person));
