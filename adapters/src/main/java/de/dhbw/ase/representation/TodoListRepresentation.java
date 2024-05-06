@@ -1,31 +1,28 @@
-package de.dhbw.ase.entities;
+package de.dhbw.ase.representation;
 
+import de.dhbw.ase.entities.Todo;
 import de.dhbw.ase.values.ListStatus;
+import lombok.Builder;
 
 import java.util.List;
 import java.util.UUID;
 
-public class ToDoList {
+@Builder
+public class TodoListRepresentation {
     private UUID personID;
     private List<Todo> todoList;
     private ListStatus listStatus;
 
-    public ToDoList(UUID personID, List<Todo> todoList, ListStatus listStatus) {
+    public TodoListRepresentation(UUID personID, List<Todo> todoList, ListStatus listStatus) {
         this.personID = personID;
         this.todoList = todoList;
         this.listStatus = listStatus;
     }
+    public TodoListRepresentation(){}
 
     public UUID getPersonID() {return personID;}
 
-    public void setPersonID(UUID personID) {this.personID = personID;}
-
     public List<Todo> getTodoList() {return todoList;}
 
-    public void setTodoList(List<Todo> todoList) {this.todoList = todoList;}
-
     public ListStatus getListStatus() {return listStatus;}
-
-    public void setListStatus(ListStatus listStatus) {this.listStatus = listStatus;}
-
 }

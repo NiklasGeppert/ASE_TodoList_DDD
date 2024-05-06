@@ -1,6 +1,7 @@
 package de.dhbw.ase.repositories;
 
 import de.dhbw.ase.entities.Person;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;

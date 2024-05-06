@@ -1,15 +1,16 @@
 package de.dhbw.ase.repositories;
 
-import de.dhbw.ase.entities.ToDoList;
+import de.dhbw.ase.entities.TodoList;
 import de.dhbw.ase.values.ListStatus;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface TodoListRepository {
-    ToDoList insert(ToDoList toDoList);
-    ToDoList save(ToDoList toDoList);
-    void delete(ToDoList toDoList);
-    Optional<ToDoList> findById(String id);
-    List<ToDoList> findbyStatus(ListStatus status);
+    TodoList insert(TodoList toDoList);
+    TodoList save(TodoList toDoList);
+    void delete(TodoList toDoList);
+    Optional<TodoList> findById(String id);
+    List<TodoList> findbyStatus(ListStatus status);
 }
