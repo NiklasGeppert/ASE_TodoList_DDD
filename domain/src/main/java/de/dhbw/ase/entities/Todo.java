@@ -20,16 +20,18 @@ public final class Todo {
 
     }
 
-    public Todo(String title,String description, EndDate enddate){
+    public Todo(String title,String description, EndDate enddate, UUID personID, Place place){
         this.uuid = UUID.randomUUID();
         this.title= title;
         this.description = description;
         this.enddate = enddate;
+        this.personID = personID;
+        this.place = place;
         if(enddate.endDatum().isBefore(LocalDate.now())){
-            this.status = Status.OPEN;
+            setStatus(Status.OPEN);
         }
         else {
-            this.status = Status.OVERDUE;
+            setStatus(Status.OVERDUE);
         }
     }
 
@@ -58,4 +60,5 @@ public final class Todo {
     public Status getStatus() {return status;}
 
     public void setStatus(Status status) {this.status = status;}
+
 }

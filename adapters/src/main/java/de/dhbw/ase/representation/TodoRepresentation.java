@@ -17,20 +17,18 @@ public class TodoRepresentation {
     private UUID personID;
     private Place place;
 
-    public TodoRepresentation(UUID id, String title, String description, Status status, EndDate enddate, UUID personID, Place place) {
+    public TodoRepresentation(UUID id, String title, String description, EndDate enddate, UUID personID, Place place) {
         this.id = id;
         this.title = title;
         this.description = description;
-        this.status = status;
         this.enddate = enddate;
         this.personID = personID;
         this.place = place;
     }
-    public TodoRepresentation(String title, String description, Status status, EndDate enddate, UUID personID, Place place) {
+    public TodoRepresentation(String title, String description, EndDate enddate, UUID personID, Place place) {
         this.id = UUID.randomUUID();
         this.title = title;
         this.description = description;
-        this.status = status;
         this.enddate = enddate;
         this.personID = personID;
         this.place = place;
