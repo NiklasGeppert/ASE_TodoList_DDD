@@ -35,14 +35,26 @@ public class TodoRepresentation {
 
     public UUID getId() {return todoid;}
 
+    public void setId(UUID id) {this.todoid = id;}
+
     public String getTitle() {return title;}
+
+    public void setTitle(String title) {this.title = title;}
 
     public String getDescription() {return description;}
 
+    public void setDescription(String description) {this.description = description;}
+
     public Status getStatus() {return status;}
+
+    public void setStatus(Status status) {this.status = status;}
 
     public EndDate getEnddate() {return enddate;}
 
+    public void setEnddate(EndDate enddate) {this.enddate = enddate;}
+
     public UUID getPersonID() {return personID;}
+
+    public void setPersonID(UUID personID) {this.personID = personID;}
 
 }

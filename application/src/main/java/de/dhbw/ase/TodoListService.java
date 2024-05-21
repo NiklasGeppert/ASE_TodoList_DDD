@@ -63,10 +63,13 @@ public class TodoListService {
     }
 
     public TodoList removeTodo(UUID personID, UUID todoID) {
-        Optional<TodoList> todoList = todoListRepository.findById(personID);
-        if (todoList.isEmpty()){
+        Optional<TodoList> optionalTodoList = todoListRepository.findById(personID);
+        if (optionalTodoList.isEmpty()) {
             throw new TodoListNotFoundException(NotFoundMessage);
         }
-        return todoListRepository.remove(todoList.get(), todoID);
+        TodoList todoList = optionalTodoList.get();
+        todoList.getTodoList().removeIf(todo -> todo.getTodoID().equals(todoID));
+        return todoListRepository.save(todoList);
     }
+
 }

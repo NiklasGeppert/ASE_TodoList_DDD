@@ -25,7 +25,7 @@ public final class Todo {
 
 
     public Todo(){
-
+        this.todoId = UUID.randomUUID();
     }
 
     public Todo(String title, String description, EndDate endDate, UUID personID){

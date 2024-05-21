@@ -32,9 +32,9 @@ public class TodoList {
 
     public TodoList(){}
 
-    public UUID getPerson() {return personid;}
+    public UUID getPersonID() {return personid;}
 
-    public void setPerson(UUID personID) {this.personid = personID;}
+    public void setPersonID(UUID personID) {this.personid = personID;}
 
     public List<Todo> getTodoList() {return todoList;}
 

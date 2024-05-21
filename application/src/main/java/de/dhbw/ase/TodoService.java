@@ -35,15 +35,13 @@ public class TodoService {
 
     public TodoRepresentation createTodo(TodoRepresentation todoRepresentation){
 
-        System.out.println("Creating todo with representation: " + todoRepresentation);
-        Todo todo = new Todo(
-                todoRepresentation.getTitle(),
-                todoRepresentation.getDescription(),
-                todoRepresentation.getEnddate(),
-                todoRepresentation.getPersonID()
-        );
+        Todo todo = new Todo();
+        todo.setTitle(todoRepresentation.getTitle());
+        todo.setDescription(todoRepresentation.getDescription());
+        todo.setendDate((todoRepresentation.getEnddate()));
+        todo.setPersonID(todoRepresentation.getPersonID());
+
         Todo savedTodo = todoRepository.save(todo);
-        System.out.println("Saved todo: " + savedTodo);
 
         return todoMapper.toTodoRepresentation(savedTodo);
     }
