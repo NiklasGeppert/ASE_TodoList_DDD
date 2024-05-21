@@ -1,10 +1,10 @@
 package de.dhbw.ase;
 
-import de.dhbw.ase.entities.Person;
-import de.dhbw.ase.exceptions.PersonNotFoundException;
-import de.dhbw.ase.mappers.PersonMapper;
-import de.dhbw.ase.repositories.PersonRepository;
-import de.dhbw.ase.representation.PersonRepresentation;
+import de.dhbw.ase.Person.Person;
+import de.dhbw.ase.Person.PersonNotFoundException;
+import de.dhbw.ase.Person.PersonMapper;
+import de.dhbw.ase.Person.PersonRepository;
+import de.dhbw.ase.Person.PersonRepresentation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
