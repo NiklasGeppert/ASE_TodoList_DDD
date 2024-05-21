@@ -1,5 +1,6 @@
 package de.dhbw.ase.representation;
 
+import de.dhbw.ase.entities.Person;
 import de.dhbw.ase.entities.Todo;
 import de.dhbw.ase.values.ListStatus;
 import lombok.Builder;
@@ -13,8 +14,8 @@ public class TodoListRepresentation {
     private List<Todo> todoList;
     private ListStatus listStatus;
 
-    public TodoListRepresentation(UUID personID, List<Todo> todoList, ListStatus listStatus) {
-        this.personID = personID;
+    public TodoListRepresentation(UUID personid, List<Todo> todoList, ListStatus listStatus) {
+        this.personID = personid;
         this.todoList = todoList;
         this.listStatus = listStatus;
     }

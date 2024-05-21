@@ -11,7 +11,8 @@ import java.util.UUID;
 public interface TodoRepository{
     List<Todo> findByStatus(Status status);
     Optional<Todo> findById(UUID id);
-    List<Todo> findByEnddateBefore(EndDate endDate);
+    List<Todo> findByEnddate(EndDate enddate);
     List<Todo> findByPerson(UUID personId);
     void deleteById(UUID id);
+    Todo save(Todo todo);
 }

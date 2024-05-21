@@ -1,11 +1,16 @@
 package de.dhbw.ase.representation;
 
+import de.dhbw.ase.entities.Todo;
+import de.dhbw.ase.entities.TodoList;
 import de.dhbw.ase.values.Email;
 import de.dhbw.ase.values.Gender;
+import de.dhbw.ase.values.ListStatus;
 import de.dhbw.ase.values.PersonName;
 import lombok.Builder;
 import lombok.Getter;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @Getter
@@ -23,6 +28,7 @@ public class PersonRepresentation {
         this.name = name;
         this.getemail = getemail;
         this.gender = gender;
+
     }
 
     public PersonRepresentation(PersonName name, Email getemail, Gender gender) {
@@ -30,6 +36,7 @@ public class PersonRepresentation {
         this.name = name;
         this.getemail = getemail;
         this.gender = gender;
+
     }
 
     public PersonRepresentation() {}
@@ -41,6 +48,7 @@ public class PersonRepresentation {
     public Email getemail() {return getemail;}
 
     public Gender getGender() {return gender;}
+
 
 
 }

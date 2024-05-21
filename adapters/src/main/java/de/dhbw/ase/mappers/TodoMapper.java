@@ -8,13 +8,12 @@ import org.springframework.stereotype.Component;
 public class TodoMapper {
     public TodoRepresentation toTodoRepresentation(Todo todo) {
         return TodoRepresentation.builder()
-                .id(todo.getTodoID())
+                .todoid(todo.getTodoID())
                 .title(todo.getTitle())
                 .description(todo.getDescription())
                 .status(todo.getStatus())
-                .enddate(todo.getEnddate())
+                .enddate(todo.getendDate())
                 .personID(todo.getPersonID())
-                .place(todo.getPlace())
                 .build();
     }
 }

@@ -2,40 +2,47 @@ package de.dhbw.ase.entities;
 
 import de.dhbw.ase.values.EndDate;
 import de.dhbw.ase.values.Status;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.util.UUID;
 
+@Entity
 public final class Todo {
-    private UUID uuid;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private UUID todoId;
     private String title;
     private String description;
     private Status status;
-    private EndDate enddate;
+    @Embedded
+    @AttributeOverrides({
+            @AttributeOverride(name = "endDatum", column = @Column(name = "end_date"))
+    })
+    private EndDate endDate;
     private UUID personID;
-    private Place place;
 
 
     public Todo(){
 
     }
 
-    public Todo(String title,String description, EndDate enddate, UUID personID, Place place){
-        this.uuid = UUID.randomUUID();
+    public Todo(String title, String description, EndDate endDate, UUID personID){
+        this.todoId = UUID.randomUUID();
         this.title= title;
         this.description = description;
-        this.enddate = enddate;
-        this.personID = personID;
-        this.place = place;
-        if(enddate.endDatum().isBefore(LocalDate.now())){
-            setStatus(Status.OPEN);
-        }
-        else {
+        this.endDate = endDate;
+        if(endDate.endDate().isAfter(LocalDate.now())){
             setStatus(Status.OVERDUE);
         }
+        else {
+            setStatus(Status.OPEN);
+        }
+        this.personID = personID;
     }
 
-    public UUID getTodoID(){return uuid;}
+    public UUID getTodoID(){return todoId;}
 
     public String getTitle(){ return title;}
 
@@ -45,17 +52,14 @@ public final class Todo {
 
     public void setDescription(String description){this.description = description;}
 
-    public EndDate getEnddate(){return enddate;}
+    public EndDate getendDate(){return endDate;}
 
-    public void setEnddate(EndDate enddate){this.enddate = enddate;}
+    public void setendDate(EndDate endDate){this.endDate = endDate;}
 
     public UUID getPersonID(){return personID;}
 
     public void setPersonID(UUID personID){this.personID = personID;}
 
-    public Place getPlace(){return place;}
-
-    public void setPlace(Place place){this.place = place;}
 
     public Status getStatus() {return status;}
 

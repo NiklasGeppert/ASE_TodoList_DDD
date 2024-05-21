@@ -2,9 +2,12 @@ package de.dhbw.ase.entities;
 
 import de.dhbw.ase.values.Email;
 import de.dhbw.ase.values.Gender;
+import de.dhbw.ase.values.ListStatus;
 import de.dhbw.ase.values.PersonName;
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -15,13 +18,14 @@ public class Person {
     private PersonName name;
     @Embedded
     private Email email;
-    private Gender gender;
+    private Gender gender;;
 
     public Person(UUID id, PersonName name, Email email, Gender gender) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.gender = gender;
+
     }
 
     public Person() {

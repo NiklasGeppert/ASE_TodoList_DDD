@@ -31,17 +31,23 @@ public class TodoRepositoryBridge implements TodoRepository {
     }
 
     @Override
-    public List<Todo> findByEnddateBefore(EndDate endDate) {
-        return todoData.findByEndDate(endDate);
+    public List<Todo> findByEnddate(EndDate enddate) {
+        return todoData.findByEndDate(enddate);
     }
 
     @Override
     public List<Todo> findByPerson(UUID personId) {
-        return todoData.findByPerson(personId);
+        return todoData.findByPersonID(personId);
     }
 
     @Override
     public void deleteById(UUID id) {
         todoData.deleteById(id);
     }
+
+    @Override
+    public Todo save(Todo todo) {
+        return todoData.save(todo);
+    }
+
 }

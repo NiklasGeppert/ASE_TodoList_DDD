@@ -2,6 +2,7 @@ package de.dhbw.ase;
 
 import de.dhbw.ase.entities.Todo;
 import de.dhbw.ase.exceptions.PersonNotFoundException;
+import de.dhbw.ase.exceptions.TodoNotFoundException;
 import de.dhbw.ase.mappers.TodoMapper;
 import de.dhbw.ase.repositories.TodoRepository;
 import de.dhbw.ase.representation.TodoRepresentation;
@@ -10,6 +11,9 @@ import de.dhbw.ase.values.Status;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -30,14 +34,18 @@ public class TodoService {
     }
 
     public TodoRepresentation createTodo(TodoRepresentation todoRepresentation){
-        Todo todo = new Todo(todoRepresentation.getTitle(),
+
+        System.out.println("Creating todo with representation: " + todoRepresentation);
+        Todo todo = new Todo(
+                todoRepresentation.getTitle(),
                 todoRepresentation.getDescription(),
                 todoRepresentation.getEnddate(),
-                todoRepresentation.getPersonID(),
-                todoRepresentation.getPlace()
+                todoRepresentation.getPersonID()
         );
+        Todo savedTodo = todoRepository.save(todo);
+        System.out.println("Saved todo: " + savedTodo);
 
-        return todoMapper.toTodoRepresentation(todo);
+        return todoMapper.toTodoRepresentation(savedTodo);
     }
 
     public Todo getTodo(UUID id){
@@ -50,7 +58,7 @@ public class TodoService {
         Optional<Todo> optionalTodo = todoRepository.findById(id);
 
         if (optionalTodo.isEmpty()){
-            throw new PersonNotFoundException(NotFoundMessage);
+            throw new TodoNotFoundException(NotFoundMessage);
         }
         todoRepository.deleteById(id);
     }
@@ -59,9 +67,8 @@ public class TodoService {
         Todo todo = getTodo(id);
         todo.setTitle(todoRepresentation.getTitle());
         todo.setDescription(todoRepresentation.getDescription());
-        todo.setEnddate(todoRepresentation.getEnddate());
+        todo.setendDate(todoRepresentation.getEnddate());
         todo.setPersonID(todoRepresentation.getPersonID());
-        todo.setPlace(todoRepresentation.getPlace());
         return todoMapper.toTodoRepresentation(todo);
     }
 
@@ -69,11 +76,24 @@ public class TodoService {
         return todoRepository.findByPerson(personId);
     }
 
-    public List<Todo> getByEnddate(EndDate enddate){
-        return todoRepository.findByEnddateBefore(enddate);
+    public List<Todo> getByEnddate(String enddateString){
+        EndDate enddate;
+        try {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            LocalDate localDate = LocalDate.parse(enddateString, formatter);
+            enddate = new EndDate(localDate);
+        } catch (DateTimeParseException e) {
+            throw new IllegalArgumentException("Invalid date format, please use yyyy-MM-dd", e);
+        }
+        return todoRepository.findByEnddate(enddate);
     }
 
     public List<Todo> getByStatus(Status status){
         return todoRepository.findByStatus(status);
+    }
+
+    public void changePerson(UUID id, UUID personId){
+        Todo todo = getTodo(id);
+        todo.setPersonID(personId);
     }
 }
