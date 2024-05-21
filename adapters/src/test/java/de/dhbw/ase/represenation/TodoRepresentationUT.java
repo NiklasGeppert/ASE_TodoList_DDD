@@ -1,6 +1,6 @@
 package de.dhbw.ase.represenation;
 
-import de.dhbw.ase.representation.TodoRepresentation;
+import de.dhbw.ase.Todo.TodoRepresentation;
 import de.dhbw.ase.values.EndDate;
 import de.dhbw.ase.values.Status;
 import org.junit.jupiter.api.Test;

@@ -1,9 +1,10 @@
 package de.dhbw.ase.mappers;
 
-import de.dhbw.ase.entities.TodoList;
-import de.dhbw.ase.representation.TodoListRepresentation;
+import de.dhbw.ase.TodoList.TodoList;
+import de.dhbw.ase.TodoList.TodoListMapper;
+import de.dhbw.ase.TodoList.TodoListRepresentation;
 import de.dhbw.ase.values.ListStatus;
-import de.dhbw.ase.entities.Todo;
+import de.dhbw.ase.Todo.Todo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

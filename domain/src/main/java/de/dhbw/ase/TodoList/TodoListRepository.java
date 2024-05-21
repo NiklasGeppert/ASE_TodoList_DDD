@@ -1,9 +1,7 @@
-package de.dhbw.ase.repositories;
+package de.dhbw.ase.TodoList;
 
-import de.dhbw.ase.entities.Todo;
-import de.dhbw.ase.entities.TodoList;
+import de.dhbw.ase.Todo.Todo;
 import de.dhbw.ase.values.ListStatus;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;

@@ -2,7 +2,7 @@ package de.dhbw.ase.plugins.rest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import de.dhbw.ase.PersonService;
-import de.dhbw.ase.representation.PersonRepresentation;
+import de.dhbw.ase.Person.PersonRepresentation;
 import de.dhbw.ase.values.Email;
 import de.dhbw.ase.values.Gender;
 import de.dhbw.ase.values.PersonName;

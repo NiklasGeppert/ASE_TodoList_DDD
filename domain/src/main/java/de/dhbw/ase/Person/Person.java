@@ -1,13 +1,10 @@
-package de.dhbw.ase.entities;
+package de.dhbw.ase.Person;
 
 import de.dhbw.ase.values.Email;
 import de.dhbw.ase.values.Gender;
-import de.dhbw.ase.values.ListStatus;
 import de.dhbw.ase.values.PersonName;
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 
 @Entity

@@ -1,10 +1,10 @@
 package de.dhbw.ase.plugins.DataInitialize;
 
-import de.dhbw.ase.entities.Person;
-import de.dhbw.ase.entities.Todo;
-import de.dhbw.ase.repositories.PersonRepository;
-import de.dhbw.ase.repositories.TodoListRepository;
-import de.dhbw.ase.repositories.TodoRepository;
+import de.dhbw.ase.Person.Person;
+import de.dhbw.ase.Todo.Todo;
+import de.dhbw.ase.Person.PersonRepository;
+import de.dhbw.ase.TodoList.TodoListRepository;
+import de.dhbw.ase.Todo.TodoRepository;
 import de.dhbw.ase.values.Email;
 import de.dhbw.ase.values.EndDate;
 import de.dhbw.ase.values.Gender;

@@ -1,7 +1,8 @@
-package de.dhbw.ase.plugins.persistence;
+package de.dhbw.ase.plugins.persistence.TodoList;
 
-import de.dhbw.ase.entities.Todo;
-import de.dhbw.ase.repositories.TodoRepository;
+import de.dhbw.ase.Todo.Todo;
+import de.dhbw.ase.Todo.TodoRepository;
+import de.dhbw.ase.plugins.persistence.Todo.TodoData;
 import de.dhbw.ase.values.EndDate;
 import de.dhbw.ase.values.Status;
 import org.springframework.beans.factory.annotation.Autowired;

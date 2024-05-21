@@ -1,12 +1,11 @@
 package de.dhbw.ase;
 
-import de.dhbw.ase.entities.Todo;
-import de.dhbw.ase.entities.TodoList;
-import de.dhbw.ase.exceptions.PersonNotFoundException;
-import de.dhbw.ase.exceptions.TodoListNotFoundException;
-import de.dhbw.ase.mappers.TodoListMapper;
-import de.dhbw.ase.repositories.TodoListRepository;
-import de.dhbw.ase.representation.TodoListRepresentation;
+import de.dhbw.ase.Todo.Todo;
+import de.dhbw.ase.TodoList.TodoList;
+import de.dhbw.ase.TodoList.TodoListNotFoundException;
+import de.dhbw.ase.TodoList.TodoListMapper;
+import de.dhbw.ase.TodoList.TodoListRepository;
+import de.dhbw.ase.TodoList.TodoListRepresentation;
 import de.dhbw.ase.values.ListStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

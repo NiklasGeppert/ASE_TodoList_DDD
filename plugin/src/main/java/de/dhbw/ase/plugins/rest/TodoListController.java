@@ -2,10 +2,9 @@ package de.dhbw.ase.plugins.rest;
 
 import de.dhbw.ase.TodoListService;
 import de.dhbw.ase.TodoService;
-import de.dhbw.ase.entities.Todo;
-import de.dhbw.ase.entities.TodoList;
-import de.dhbw.ase.representation.TodoListRepresentation;
-import de.dhbw.ase.representation.TodoRepresentation;
+import de.dhbw.ase.Todo.Todo;
+import de.dhbw.ase.TodoList.TodoList;
+import de.dhbw.ase.TodoList.TodoListRepresentation;
 import de.dhbw.ase.values.ListStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

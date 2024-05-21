@@ -1,7 +1,6 @@
-package de.dhbw.ase.representation;
+package de.dhbw.ase.TodoList;
 
-import de.dhbw.ase.entities.Person;
-import de.dhbw.ase.entities.Todo;
+import de.dhbw.ase.Todo.Todo;
 import de.dhbw.ase.values.ListStatus;
 import lombok.Builder;
 

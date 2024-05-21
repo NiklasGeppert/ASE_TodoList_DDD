@@ -1,6 +1,6 @@
-package de.dhbw.ase.plugins.persistence;
+package de.dhbw.ase.plugins.persistence.Todo;
 
-import de.dhbw.ase.entities.Todo;
+import de.dhbw.ase.Todo.Todo;
 import de.dhbw.ase.values.EndDate;
 import de.dhbw.ase.values.Status;
 import org.springframework.data.jpa.repository.JpaRepository;

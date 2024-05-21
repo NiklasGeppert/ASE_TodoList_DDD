@@ -1,7 +1,5 @@
-package de.dhbw.ase.mappers;
+package de.dhbw.ase.Todo;
 
-import de.dhbw.ase.entities.Todo;
-import de.dhbw.ase.representation.TodoRepresentation;
 import org.springframework.stereotype.Component;
 
 @Component

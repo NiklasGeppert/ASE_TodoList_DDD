@@ -1,7 +1,8 @@
 package de.dhbw.ase.mappers;
 
-import de.dhbw.ase.entities.Todo;
-import de.dhbw.ase.representation.TodoRepresentation;
+import de.dhbw.ase.Todo.Todo;
+import de.dhbw.ase.Todo.TodoMapper;
+import de.dhbw.ase.Todo.TodoRepresentation;
 import de.dhbw.ase.values.EndDate;
 import de.dhbw.ase.values.Status;
 import org.junit.jupiter.api.BeforeEach;

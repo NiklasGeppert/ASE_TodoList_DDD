@@ -1,7 +1,8 @@
 package de.dhbw.ase.mappers;
 
-import de.dhbw.ase.entities.Person;
-import de.dhbw.ase.representation.PersonRepresentation;
+import de.dhbw.ase.Person.Person;
+import de.dhbw.ase.Person.PersonMapper;
+import de.dhbw.ase.Person.PersonRepresentation;
 import de.dhbw.ase.values.Email;
 import de.dhbw.ase.values.Gender;
 import de.dhbw.ase.values.PersonName;

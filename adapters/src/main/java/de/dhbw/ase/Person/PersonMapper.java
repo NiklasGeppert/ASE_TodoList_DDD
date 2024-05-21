@@ -1,7 +1,5 @@
-package de.dhbw.ase.mappers;
+package de.dhbw.ase.Person;
 
-import de.dhbw.ase.entities.Person;
-import de.dhbw.ase.representation.PersonRepresentation;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

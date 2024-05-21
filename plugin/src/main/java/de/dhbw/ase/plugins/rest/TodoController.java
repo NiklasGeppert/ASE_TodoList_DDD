@@ -1,9 +1,8 @@
 package de.dhbw.ase.plugins.rest;
 
 import de.dhbw.ase.TodoService;
-import de.dhbw.ase.entities.Todo;
-import de.dhbw.ase.representation.TodoRepresentation;
-import de.dhbw.ase.values.EndDate;
+import de.dhbw.ase.Todo.Todo;
+import de.dhbw.ase.Todo.TodoRepresentation;
 import de.dhbw.ase.values.Status;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

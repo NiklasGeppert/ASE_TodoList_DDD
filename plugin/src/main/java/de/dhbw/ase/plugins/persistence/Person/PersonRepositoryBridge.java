@@ -1,7 +1,7 @@
-package de.dhbw.ase.plugins.persistence;
+package de.dhbw.ase.plugins.persistence.Person;
 
-import de.dhbw.ase.entities.Person;
-import de.dhbw.ase.repositories.PersonRepository;
+import de.dhbw.ase.Person.Person;
+import de.dhbw.ase.Person.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

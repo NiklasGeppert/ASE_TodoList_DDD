@@ -1,7 +1,7 @@
 package de.dhbw.ase.represenation;
 
-import de.dhbw.ase.entities.Todo;
-import de.dhbw.ase.representation.TodoListRepresentation;
+import de.dhbw.ase.Todo.Todo;
+import de.dhbw.ase.TodoList.TodoListRepresentation;
 import de.dhbw.ase.values.ListStatus;
 import org.junit.jupiter.api.Test;
 

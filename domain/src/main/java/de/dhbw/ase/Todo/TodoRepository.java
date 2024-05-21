@@ -1,6 +1,5 @@
-package de.dhbw.ase.repositories;
+package de.dhbw.ase.Todo;
 
-import de.dhbw.ase.entities.Todo;
 import de.dhbw.ase.values.EndDate;
 import de.dhbw.ase.values.Status;
 

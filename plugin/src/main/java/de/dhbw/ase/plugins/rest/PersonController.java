@@ -1,7 +1,6 @@
 package de.dhbw.ase.plugins.rest;
 
-import de.dhbw.ase.entities.Person;
-import de.dhbw.ase.representation.PersonRepresentation;
+import de.dhbw.ase.Person.PersonRepresentation;
 import io.swagger.v3.oas.annotations.Parameter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -9,7 +8,6 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import de.dhbw.ase.PersonService;
 
-import java.awt.*;
 import java.util.List;
 import java.util.UUID;
 

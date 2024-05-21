@@ -2,9 +2,8 @@ package de.dhbw.ase.plugins.rest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import de.dhbw.ase.TodoService;
-import de.dhbw.ase.plugins.rest.TodoController;
-import de.dhbw.ase.representation.TodoRepresentation;
-import de.dhbw.ase.entities.Todo;
+import de.dhbw.ase.Todo.TodoRepresentation;
+import de.dhbw.ase.Todo.Todo;
 import de.dhbw.ase.values.Status;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

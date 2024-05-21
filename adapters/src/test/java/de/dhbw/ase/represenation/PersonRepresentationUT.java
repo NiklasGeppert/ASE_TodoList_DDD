@@ -1,6 +1,6 @@
 package de.dhbw.ase.represenation;
 
-import de.dhbw.ase.representation.PersonRepresentation;
+import de.dhbw.ase.Person.PersonRepresentation;
 import de.dhbw.ase.values.Email;
 import de.dhbw.ase.values.Gender;
 import de.dhbw.ase.values.PersonName;

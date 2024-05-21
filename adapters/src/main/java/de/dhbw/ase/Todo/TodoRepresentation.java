@@ -1,4 +1,4 @@
-package de.dhbw.ase.representation;
+package de.dhbw.ase.Todo;
 
 import de.dhbw.ase.values.EndDate;
 import de.dhbw.ase.values.Status;

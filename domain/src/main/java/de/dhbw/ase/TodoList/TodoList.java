@@ -1,5 +1,6 @@
-package de.dhbw.ase.entities;
+package de.dhbw.ase.TodoList;
 
+import de.dhbw.ase.Todo.Todo;
 import de.dhbw.ase.values.ListStatus;
 import jakarta.persistence.*;
 
